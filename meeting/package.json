@@ -1,0 +1,19 @@
+{
+  "name": "meeting",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "prestart-mac": "yes|cp -R -H ./libs/macOS/ ./node_modules/electron/dist/Electron.app/Contents/Frameworks",
+    "rebuild-sdk": "node-gyp rebuild --target=10.1.5 -dist-url=https://atom.io/download/atom-shell"
+  },
+  "author": "jakexchan",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "~10.1.5"
+  },
+  "dependencies": {
+    "bindings": "^1.5.0",
+    "node-addon-api": "^3.0.2"
+  }
+}

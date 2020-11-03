@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <title>Hello World!</title>
+  </head>
+  <body>
+    <!-- <h1>Hello World!</h1>
+    We are using Node.js <span id="node-version"></span>,
+    Chromium <span id="chrome-version"></span>,
+    and Electron <span id="electron-version"></span>. -->
+    <div>SDK 是否初始化: <span id="initText">No</span></div>
+    <button id="initBtn">初始化 SDK</button>
+    <hr />
+    <div>
+      <div>SDK 是否登录: <span id="loginText">No</span></div>
+      <label>appKey: </label><input id="appKey" /><br>
+      <label>accountId: </label><input id="accountId" /><br>
+      <label>accountToken: </label><input id="accountToken" /><br>
+      <button id="loginBtn">登录</button>
+    </div>
+    <hr />
+    <div>
+      <label>昵称: </label><input id="nickname" /><br>
+      <label>开启麦克风: </label><input type="checkbox" id="audio" /><br>
+      <label>开启摄像头: </label><input type="checkbox" id="video" /><br>
+      <button id="startBtn">启动会议</button><br>
+      <p>结果: <span id="startText"></span></p>
+    </div>
+    <hr />
+    <div>
+      <p>会议状态: <span id="statusText"></span></p>
+    </div>
+    <div>
+      <button id="logoutBtn">退出登录</button><br><br>
+
+      <button id="unInitBtn">卸载 SDK</button><br>
+    </div>
+    <!-- You can also require other files to run in this process -->
+    <script src="./renderer.js"></script>
+  </body>
+</html>
