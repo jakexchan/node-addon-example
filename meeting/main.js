@@ -3,10 +3,10 @@ const {app, BrowserWindow, ipcRenderer} = require('electron')
 const path = require('path')
 const NEMeetingSDK = require('bindings')('NEMeetingSDK')
 const { ipcMain } = require('electron')
-const EventEmitter = require('events').EventEmitter;
+const EventEmitter = require('events').EventEmitter
 const meetingInstance = new NEMeetingSDK.NEMeetingManager()
 
-const emitter = new EventEmitter();
+const emitter = new EventEmitter()
 meetingInstance.callEmit(emitter.emit.bind(emitter))
 
 function listeners () {
@@ -81,7 +81,7 @@ app.whenReady().then(() => {
     // dock icon is clicked and there are no other windows open.
     if (BrowserWindow.getAllWindows().length === 0) createWindow()
   })
-});
+})
 
 // Quit when all windows are closed, except on macOS. There, it's common
 // for applications and their menu bar to stay active until the user quits
